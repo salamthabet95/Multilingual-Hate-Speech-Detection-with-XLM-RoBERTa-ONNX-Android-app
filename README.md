@@ -92,6 +92,12 @@ The server will start on `http://localhost:8002`
 - **Network status indicator** with color-coded status
 - **Clean, intuitive interface** without technical jargon
 
+### App Screenshots
+
+![App Demo](screenshots/app_demo.png)
+
+*The app demonstrates multilingual hate speech detection across Turkish, English, and Arabic languages with real-time confidence scores.*
+
 ## 🔧 API Endpoints
 
 **Server Type**: Python's built-in HTTP server (not FastAPI)
