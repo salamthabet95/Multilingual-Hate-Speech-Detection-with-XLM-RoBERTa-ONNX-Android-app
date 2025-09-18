@@ -94,7 +94,7 @@ The server will start on `http://localhost:8002`
 
 ### App Screenshots
 
-![App Demo](screenshots/app_demo.png)
+![App Demo](screenshots/app-demo.png)
 
 *The app demonstrates multilingual hate speech detection across Turkish, English, and Arabic languages with real-time confidence scores.*
 
