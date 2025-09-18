@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/header_background"
+            android:padding="24dp"
+            android:layout_marginBottom="24dp">
+
+            <!-- App Icon/Logo -->
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/app_icon"
+                android:layout_marginBottom="16dp" />
+
+            <!-- App Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hate Speech Detector"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Subtitle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Multilingual AI Detection"
+                android:textSize="16sp"
+                android:textColor="@color/secondary_text"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Status Indicator -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/status_background"
+                android:padding="12dp">
+
+                <View
+                    android:id="@+id/statusIndicator"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:background="@drawable/status_dot"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/statusText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Initializing..."
+                    android:textSize="14sp"
+                    android:textColor="@color/status_text" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Input Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="20dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter Text to Analyze"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/textInput"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/input_background"
+                android:gravity="top|start"
+                android:hint="Type your text here in any language..."
+                android:inputType="textMultiLine"
+                android:padding="16dp"
+                android:textSize="16sp"
+                android:textColor="@color/input_text"
+                android:textColorHint="@color/hint_text"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Analyze Button -->
+            <Button
+                android:id="@+id/predictButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="🔍 Analyze Text"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/button_text"
+                android:background="@drawable/button_background"
+                android:elevation="4dp" />
+
+        </LinearLayout>
+
+        <!-- Results Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="20dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Analysis Results"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Prediction Result -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/result_background"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Prediction:"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_text" />
+
+                <TextView
+                    android:id="@+id/resultText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not analyzed"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/neutral_text" />
+
+            </LinearLayout>
+
+            <!-- Confidence -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/result_background"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Confidence:"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_text" />
+
+                <TextView
+                    android:id="@+id/confidenceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/neutral_text" />
+
+            </LinearLayout>
+
+            <!-- Model Info (Hidden since we only use transformer) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/result_background"
+                android:padding="16dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Model:"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_text" />
+
+                <TextView
+                    android:id="@+id/modelUsedText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AI Model"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/neutral_text" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Quick Info -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/info_background"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💡 Quick Tips"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Supports Arabic, Turkish, and English\n• Analyzes context, not just keywords\n• Results show confidence level\n• Green = Safe, Red = Hate Speech"
+                android:textSize="14sp"
+                android:textColor="@color/info_text"
+                android:lineSpacingExtra="4dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

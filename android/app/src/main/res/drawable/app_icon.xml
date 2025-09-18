@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="60dp"
+    android:height="60dp"
+    android:viewportWidth="60"
+    android:viewportHeight="60">
+    
+    <!-- Background Circle -->
+    <path
+        android:fillColor="#ffffff"
+        android:pathData="M30,30m-30,0a30,30 0,1 1,60 0a30,30 0,1 1,-60 0" />
+    
+    <!-- Main Shield Shape -->
+    <path
+        android:fillColor="#667eea"
+        android:pathData="M30,10L20,15v10c0,8 10,12 10,12s10,-4 10,-12V15L30,10z" />
+    
+    <!-- Inner Shield -->
+    <path
+        android:fillColor="#ffffff"
+        android:pathData="M30,15L25,18v8c0,6 5,8 5,8s5,-2 5,-8v-8L30,15z" />
+    
+    <!-- AI Brain/Neural Network Symbol using paths instead of circles -->
+    <path
+        android:fillColor="#667eea"
+        android:pathData="M30,19m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0" />
+    
+    <path
+        android:fillColor="#667eea"
+        android:pathData="M25,23m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0" />
+    
+    <path
+        android:fillColor="#667eea"
+        android:pathData="M35,23m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0" />
+    
+    <!-- Connection Lines -->
+    <path
+        android:strokeColor="#667eea"
+        android:strokeWidth="1"
+        android:pathData="M30,19L25,23M30,19L35,23" />
+    
+    <!-- Checkmark for Safety -->
+    <path
+        android:fillColor="#27ae60"
+        android:pathData="M26,28l3,3l6,-6"
+        android:strokeWidth="1.5"
+        android:strokeColor="#27ae60"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

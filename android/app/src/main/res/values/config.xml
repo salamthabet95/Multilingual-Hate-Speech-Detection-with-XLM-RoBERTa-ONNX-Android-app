@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- API Configuration -->
+    <!-- For Android Emulator: use 10.0.2.2 -->
+    <!-- For Real Device: use your PC's IP address -->
+    
+    <!-- Alternative URLs for different setups -->
+    <!-- <string name="api_base_url">http://10.0.2.2:8001/</string> -->
+    <!-- <string name="api_base_url">http://localhost:8001/</string> -->
+    
+    <!-- API Timeout Settings -->
+    <integer name="api_timeout_seconds">30</integer>
+    
+    <!-- Default Model -->
+    <string name="default_model">transformer</string>
+</resources>

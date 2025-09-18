@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hate Speech Detector</string>
+    <string name="app_description">Multilingual AI Detection</string>
+    
+    <!-- UI Text -->
+    <string name="enter_text_hint">Type your text here in any language...</string>
+    <string name="analyze_button">🔍 Analyze Text</string>
+    <string name="results_title">Analysis Results</string>
+    <string name="prediction_label">Prediction:</string>
+    <string name="confidence_label">Confidence:</string>
+    
+    <!-- Status Messages -->
+    <string name="status_connecting">Connecting...</string>
+    <string name="status_connected">Connected ✓</string>
+    <string name="status_analyzing">Analyzing...</string>
+    <string name="status_complete">Analysis Complete ✓</string>
+    <string name="status_error">Connection Failed</string>
+    
+    <!-- Results -->
+    <string name="result_safe">✅ Safe Content</string>
+    <string name="result_hate">🚨 Hate Speech</string>
+    <string name="result_not_analyzed">Not analyzed</string>
+    
+    <!-- Tips -->
+    <string name="tips_title">💡 Quick Tips</string>
+    <string name="tips_content">• Supports Arabic, Turkish, and English\n• Analyzes context, not just keywords\n• Results show confidence level\n• Green = Safe, Red = Hate Speech</string>
+    
+    <!-- API Configuration -->
+    <string name="api_base_url">http://192.168.1.108:8002/</string>
+</resources>
