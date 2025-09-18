@@ -206,4 +206,3 @@ For questions or issues:
 
 ---
 
-**🎉 Your multilingual hate speech detection system is ready to use!**
